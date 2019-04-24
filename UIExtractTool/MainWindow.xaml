@@ -1,0 +1,25 @@
+﻿<Window x:Class="UIExtractTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIExtractTool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1500">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Image Source="{Binding FrameImage}"></Image>
+            <Slider Value="{Binding FramePos}" Minimum="1" Maximum="{Binding FrameCount}"/>
+            <TextBox Text="{Binding FramePos}" InputScope="TelephoneNumber" VerticalAlignment="Bottom" HorizontalAlignment="Right"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Image Source="{Binding FrameToImage}"></Image>
+            <Slider Value="{Binding FrameToPos}" Minimum="1" Maximum="{Binding FrameCount}"/>
+            <TextBox Text="{Binding FrameToPos}" InputScope="TelephoneNumber" VerticalAlignment="Bottom" HorizontalAlignment="Right"></TextBox>
+        </Grid>
+    </Grid>
+</Window>
